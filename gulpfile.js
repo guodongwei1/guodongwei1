@@ -18,7 +18,7 @@ gulp.task("connect", function( done ){
             // 根目录配置 
             root : "./dist",
             // 设置端口  不要把端口号设置成两位数的端口号; 
-            port : 3000,
+            port : 5000,
             // 自动刷新功能 
             livereload : true
       });
