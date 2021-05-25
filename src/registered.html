@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    @@include("./components/link_de_zhu.html")
+
+</head>
+<body>
+    <div class="m_wrap">
+        <div class="row alert-wrapper">
+            <div class="alert alert1-success"> 恭喜注册成功</div>
+            <div class="alert alert-danger"> 抱歉存在问题</div>
+        </div>
+        <div class="layout">
+            <div id="main_cont">
+                <div class="external_logo_area">
+                    <a class="milogo" href="javascript:void(0)">
+                        <img src="https://account.xiaomi.com/static/res/8df71d6/account-static/respassport/acc-2014/img/milogo.png" alt="">
+                    </a>
+                </div>
+                <div class="title-item">
+                    <h4 class="title_big30">注册小米帐号</h4>          
+                  </div>
+                  
+                <div class="regbox">
+                    <input type="text" required="required" class="zhang_hao" placeholder="输入注册的账号"  id="username" name="username">
+                    <input type="text" required="required" class="mi_ma" placeholder="输入注册的密码" id="password" name="password">
+                    <button class="zc_btn">立即注册</button>
+                    <p> 已阅读并同意：小米 <span>用户协议</span>和<span>隐私政策</span></p>
+                </div>
+            </div>
+            <ul class="jian_ti">
+                <li style="color: #333;">简体<span style="color: #9d9d9d;">|</span></li>
+                <li>繁体<span>|</span></li>
+                <li>English<span>|</span></li>
+                <li>常见问题<span>|</span></li>
+            </ul>
+            <p class="boot_mzc">
+                小米公司版权所有-京ICP备10046444-
+                <img src="https://account.xiaomi.com/static/res/9204d06/account-static/respassport/acc-2014/img/ghs.png" alt="">
+                京公网安备11010802020134号  -京ICP证110507号
+            </p>
+        </div>
+    </div>
+    @@include("./components/link_reg_login.html")
+    <script>
+        var alerts = document.querySelectorAll(".alert-wrapper .alert");
+
+        $(function(){
+            $(".zc_btn").click(function(){
+                let uname =$("#username");
+                let wpwd = $("#password");
+               
+                $.ajax({
+                    url : "http://localhost/server/register.php",
+                    //post请求
+                    type:"POST",
+                    data : {
+                        username :uname.val(),
+                        password : wpwd.val()
+                    },
+                    dataType:"json"
+                })
+                
+                .done(function(res){
+                    // console.log(res);
+                    alerts[0].style.display = "block";
+                    setTimeout( function(){
+                              location.href = "./the_login.html";
+                        } , 800 )
+                })
+            })
+        })
+                   
+    </script>
+</body>
+</html>

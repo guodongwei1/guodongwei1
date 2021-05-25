@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.m_wrap{
+    width: 855px;
+    height: 680px;
+    padding-bottom: 80px;
+    font-size: 14px;
+    color: #666;
+    margin: 0 auto;
+}
+.m_wrap .layout{
+    width: 854px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+.m_wrap .layout .main_cont{
+    background: #fff;
+    padding: 34px 34px 0;
+}
+.external_logo_area {
+    padding: 30px 0 40px;
+    display: block;
+}
+.milogo {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto;
+    display: block;
+    cursor: default;
+}
+.title_big30 {
+    font-size: 30px;
+    font-weight: normal;
+}
+.title-item{
+    height: 45px;
+    text-align: center;
+}
+.regbox {
+    width: 332px;
+    height: 220px;
+    padding: 30px 0;
+    line-height: 20px;
+    margin: 0 auto;
+}
+.zhang_hao,
+.mi_ma{
+    width: 331px;
+    height: 33px;
+    border: none;
+    outline: none;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+.zc_btn{
+    background-color: #ff6700;
+    margin-top: 15px;
+    border: 1px solid rgba(186,186,186,.3);
+    color: #fff;
+    width: 330px;
+    height: 42px;
+    text-align: center;
+}
+.zc_btn:hover{
+    opacity: 0.7;
+    color: #fff;
+}
+.regbox>p{
+    padding: 30px 0;
+    cursor: pointer;
+    display: inline-block;
+    color: #9d9d9d;
+    text-align: center;
+}
+.regbox>p>span{
+    font-size: 15px;
+    color: #333;
+    font-weight: 700;
+}
+.jian_ti{
+    width: 330px;
+    height: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 30px;
+}
+.jian_ti>li{
+    float: left;
+    list-style: none;
+    
+}
+.jian_ti>li>span{
+    margin: 0 10px;
+}
+.boot_mzc{
+    width: 560px;
+    height: 20px;
+    font-size: 13px;
+    margin: 0 auto;
+}
+.alert-wrapper .alert{
+    display: none;
+    height: 30px;
+}
+.alert-success,
+.alert1-success{
+    width: 855px;
+    height: 40px;
+    background-color: azure;
+    color: green;
+    text-align: center;
+    font-size: 20px;
+}
+.alert-danger{
+    width: 855px;
+    height: 40px;
+    background-color: azure;
+    color: red;
+    text-align: center;
+    font-size: 20px;
+}

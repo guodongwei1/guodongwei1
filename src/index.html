@@ -1,133 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    @@include("./components/link.html")
+    <title>首页</title>
 </head>
+
 <body>
     <!-- header开始 -->
-        <!-- 头部导航 -->
-        <div class="nav_top">
-            <div class="nav_a w">
-                <div class="nav_fr">
-                    <div class="login">
-                        <a href="#">登录</a>
-                        <a href="#">注册</a>
+    @@include("./components/header.html")
+    <!-- logo导航部分结束 -->
+    <!-- 横幅导航部分 -->
+    @@include("./components/nav_erji.html")
+    <!-- 横幅部分结束 -->
+    <!-- header结束 -->
+    <!-- body部分开始 -->
+    <!-- 上新精选 -->
+    <div class="hero_wrap w">
+        <div class="sx_jx">
+            <img src="https://img.youpin.mi-img.com/jianyu/3b9f8b4e5a1639cafbb3be08cba9963a.png" alt="">
+            <p>上新精选</p>
+        </div>
+        <div class="xm_zc">
+            <img src="https://img.youpin.mi-img.com/jianyu/531253430ba83f5b88e4ae92cb5a197c.png" alt="">
+            <p>小米众筹</p>
+        </div>
+        <div class="yp_ms">
+            <img src="https://img.youpin.mi-img.com/jianyu/7a255e71670b9ef4a90723223265b5c5.png" alt="">
+            <p>有品秒杀</p>
+        </div>
+        <div class="rx_bd">
+            <img src="https://img.youpin.mi-img.com/jianyu/e565a27d7a772c4ea7affe640de9414e.png" alt="">
+            <p>热销榜单</p>
+        </div>
+        <div class="xm_zy">
+            <img src="https://img.youpin.mi-img.com/jianyu/52ec26cccb4d945aa4bacac4ec7c4622.png" alt="">
+            <p>小米自营</p>
+        </div>
+    </div>
+    <!-- 上新精选结束 -->
+    <!-- 小米众筹开始 -->
+    <div class="zc_container w">
+        <div class="sec_top">
+            <div class="sec_left">
+                <h2>小米有品众筹</h2>
+                <span>&emsp;永远好奇&nbsp;永远年轻</span>
+            </div>
+            <div class="sec_rit">
+                更多
+                <span class="iconfont icon-angle-right"></span>
+            </div>
+        </div>
+        <div class="y_m_da">
+            <div class="y_m">
+                
+                    <div class="m_cont1">
+                        <h3 class="h_a">贝氪智能办公椅</h3>
+                        <p>随动贴合托腰，入座自动启动，久...</p>
+                        <h2><span>￥</span>899</h2>
                     </div>
-                    <i></i>
-                    <div class="help">
-                        <a href="#">帮助中心</a>
+                    <img src="https://img.youpin.mi-img.com/shopmain/f5f89c6aa09c5e70b33a48cc26e60173.png" alt="">
+                    <div class="m_bot">
+                        <div class="m_bot_a">
+                            <span class="m_p1">417</span> 人支持
+                        </div>
+                        <div class="m_tag">
+                            <span>热</span>
+                        </div>
+                        <div class="m_num_a">
+                            <span class="m_num">124</span>
+                            <span class="m_num_flag">%</span>
+                        </div>
                     </div>
-                    <i></i>
-                    <div class="app">
-                        <a href="#">
-                            <i class="iconfont icon-shouji "></i>
-                            下载APP
-                        </a>
+                   
+            </div>
+            <div class="m_cent2">
+                <p>积木AR枪</p>
+                <h4><span>￥</span>299</h4>
+                <img class="qi" src="https://img.youpin.mi-img.com/shopmain/92fcc1f96c5611ab4d35bb0a0334da76.png" alt="">
+                <div class="m_bot_b">
+                    <div class="m_bot_a">
+                        <span class="m_p1">8164</span> 人支持
                     </div>
-                    <i></i>
-                    <ul class="zi_zhi">
-                        <li>
-                            <a href="#">
-                                资质证件照/协议规则
-                                <i class="iconfont icon-angle-down"></i>
-                            </a>
-                            <ul class="tow_a">
-                                <li class="az"></li>
-                                <li class="tow_a_a">资质证</li>
-                                <li class="tow_a_b">协议规则</li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <div class="m_tag">
+                        <span>热</span>
+                    </div>
+                    <div class="m_num_b">
+                        <span class="m_num">244</span>
+                        <span class="m_num_flag">%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="m_cent3">
+                <p>云米金玉凤空调</p>
+                <h4><span>￥</span>2799</h4>
+                <img class="kt" src="https://img.youpin.mi-img.com/shopmain/3b239d91b34190777aac25472ee1a1a7.png" alt="">
+                <div class="m_bot_b">
+                    <div class="m_bot_a">
+                        <span class="m_p1">1707</span> 人支持
+                    </div>
+                    <div class="m_tag">
+                        <span>火</span>
+                    </div>
+                    <div class="m_num_b">
+                        <span class="m_num">474</span>
+                        <span class="m_num_flag">%</span>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- 头部导航结束 -->
-        <!-- logo导航部分 -->
-        <div class="m_header w">
-            <div class="m_logo">
-                <img src="https://www.xiaomiyoupin.com/static3/media/logo@2x.30cd8c00.png" alt="" style="width: 100%;">
-            </div>
-            <div class="m_list">
-                <a href="#">限时抢购</a>
-                <a href="#">企业采购</a>
-            </div>
-            <div class="m_form">
-                <a href="#" class="fdj iconfont icon-fangdajing"></a>
-                <input type="text" placeholder="搜一搜" class="sou" style=" outline:none">
-                
-            </div>
-            <div class="cai">
-                <a href="#" class="iconfont icon-gouwuche"></a>
-            </div>
-        </div>
-        <!-- logo导航部分结束 -->
-        <!-- 横幅导航部分 -->
-        <div class="banner_nav w">
-            <div class="nav_cont">
-                <ul class="nav_list">
-                    <li>
-                        <span>有品推荐</span>
-                        <span>/</span>
-                        <span>手机数码</span>
-                    </li>
-                    <li>
-                        <span>有品推荐</span>
-                        <span>/</span>
-                        <span>手机数码</span>
-                    </li>
-                    <li>
-                        <span>有品推荐</span>
-                        <span>/</span>
-                        <span>手机数码</span>
-                    </li>
-                    <li>
-                        <span>有品推荐</span>
-                        <span>/</span>
-                        <span>手机数码</span>
-                    </li>
-                    <li>
-                        <span>有品推荐</span>
-                        <span>/</span>
-                        <span>手机数码</span>
-                    </li>
-                    <li>
-                        <span>有品推荐</span>
-                        <span>/</span>
-                        <span>手机数码</span>
-                    </li>
-                    <li>
-                        <span>有品推荐</span>
-                        <span>/</span>
-                        <span>手机数码</span>
-                    </li>
-                    <li>
-                        <span>有品推荐</span>
-                        <span>/</span>
-                        <span>手机数码</span>
-                    </li>
-                    <li>
-                        <span>有品推荐</span>
-                        <span>/</span>
-                        <span>手机数码</span>
-                    </li>
-                    <li>
-                        <span>有品推荐</span>
-                        <span>/</span>
-                        <span>手机数码</span>
-                    </li>
-                </ul>
-            </div>
-            <!-- 轮播图 -->
-            <div class="banner_box">
+    </div>
+    <!-- 小米众筹结束 -->
+    <!-- 秒杀部分开始 -->
+    @@include("./components/shuffling.html")
+    <!-- 秒杀部分结束 -->
+    <!-- body推荐部分 -->
 
-            </div>
-        </div>
-        
-        <!-- 横幅部分结束 -->
-    <!-- header结束 -->
+    <!-- body部分结束 -->           
+    <!-- footer部分 -->
+
+    @@include("./components/footer.html")
+    <!-- footer部分结束 -->
+
+    @@include("./components/link.html")
+
 </body>
+
 </html>

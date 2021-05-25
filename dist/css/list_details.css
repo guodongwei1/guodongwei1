@@ -1,0 +1,91 @@
+body {
+  background-color: #f2f2f2;
+}
+
+.lis_cont {
+  width: 1080px;
+  height: 1389px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+.lis_cont .lis_pro {
+  float: left;
+  width: 267px;
+  height: 267px;
+  background-color: #fff;
+}
+.lis_cont .lis_pro .lis_img {
+  width: 195px;
+  height: 195px;
+  margin-left: 34px;
+}
+.lis_cont .lis_pro .lis_img img {
+  width: 195px;
+  height: 195px;
+}
+.lis_cont .lis_pro .lis_info {
+  text-align: center;
+  height: 26px;
+  line-height: 26px;
+  margin-top: 10px;
+  color: #333;
+  font-size: 16px;
+}
+.lis_cont .lis_pro .lis_jia {
+  text-align: center;
+  height: 26px;
+  line-height: 26px;
+}
+.lis_cont .lis_pro .lis_jia span {
+  font-size: 12px;
+  color: #a92112;
+}
+.lis_cont .lis_pro .lis_jia .m-sale-tag {
+  height: 20px;
+  line-height: 20px;
+  padding: 0 6px;
+  margin-left: 8px;
+  background-color: #c00000;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: 2px;
+  border-radius: 2px;
+}
+
+.pagination {
+  width: 500px;
+  height: 40px;
+  margin: 0 auto;
+  font-size: 80%;
+}
+
+.pagination a {
+  text-decoration: none;
+  border: 1px solid #ccc;
+  padding: 2px;
+  color: #ddd;
+}
+
+.pagination a, .pagination span {
+  display: block;
+  float: left;
+  padding: 0.3em 0.5em;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.pagination .current {
+  background: #845f3f;
+  color: #fff;
+  border: solid 1px #000;
+}
+
+.pagination .current.prev, .pagination .current.next {
+  color: #999;
+  border-color: #999;
+  background: #fff;
+}
+
+.pagination .current:hover {
+  background: #845f3f;
+}

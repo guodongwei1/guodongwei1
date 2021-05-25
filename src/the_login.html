@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    @@include("./components/link_de_zhu.html")
+
+</head>
+<body>
+    <div class="m_wrap">
+        <div class="row alert-wrapper">
+            <div class="alert alert-success"> 恭喜登录成功</div>
+            <div class="alert alert-danger"> 抱歉存在问题</div>
+        </div>
+        <div class="layout">
+            <div id="main_cont">
+                <div class="external_logo_area">
+                    <a class="milogo" href="javascript:void(0)">
+                        <img src="https://account.xiaomi.com/static/res/8df71d6/account-static/respassport/acc-2014/img/milogo.png" alt="">
+                    </a>
+                </div>
+                <div class="title-item">
+                    <h4 class="title_big30">小米帐号登录</h4>          
+                  </div>
+                <div class="regbox">
+                    <input type="text" class="zhang_hao" placeholder="输入账号" id="username" name="username">
+                    <input type="text" class="mi_ma" placeholder="输入密码" id="password" name="password">
+                    <button class="zc_btn">立即登录</button>
+                    <p> 已阅读并同意：小米 <span>用户协议</span>和<span>隐私政策</span></p>
+                </div>
+            </div>
+            <ul class="jian_ti">
+                <li style="color: #333;">简体<span style="color: #9d9d9d;">|</span></li>
+                <li>繁体<span>|</span></li>
+                <li>English<span>|</span></li>
+                <li>常见问题<span>|</span></li>
+            </ul>
+            <p class="boot_mzc">
+                小米公司版权所有-京ICP备10046444-
+                <img src="https://account.xiaomi.com/static/res/9204d06/account-static/respassport/acc-2014/img/ghs.png" alt="">
+                京公网安备11010802020134号  -京ICP证110507号
+            </p>
+        </div>
+    </div>
+    @@include("./components/link_reg_login.html")
+    <script>
+        var alerts = document.querySelectorAll(".alert-wrapper .alert");
+        $(function(){
+            $(".zc_btn").click(function(){
+                $.ajax({
+                    url : "http://localhost/server/login.php",
+                    type:"POST",
+                    data : {
+                        username :$("#username").val(),
+                        password : $("#password").val()
+                    },
+                    dataType:"json"
+                })
+                .done(function(res){
+                    // console.log(res);
+                    if(res === 1){
+                        alerts[0].style.display = "block";
+
+                        setTimeout( function(){
+                              location.href = "./index.html";
+                        } , 800 )
+                    }else{
+                        alerts[1].style.display = "block";
+                    }
+                    setTimeout( function(){
+                              for(var i = 0 ; i < alerts.length ; i ++){
+                                    alerts[i].style.display = "none";
+                              }
+                              // 跳转到登录页面; 
+                        } , 1000)
+                })
+            })
+        })
+    </script>
+</body>
+</html>
