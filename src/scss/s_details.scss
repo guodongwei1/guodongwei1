@@ -67,10 +67,10 @@
             width: 500px;
             height: 500px;
             position: absolute;
-            right: -510px;
+            right: -550px;
             top: 0;
             overflow: hidden;
-            // border: 1px solid #ddd;
+            border: 1px solid #ddd;
             display: none;
         }
         
@@ -310,14 +310,16 @@
         }
         
         .m_btn .jia:hover {
-            background-color: #fff;
-            color: #845f3f;
-            border-color: #845f3f;
+            background-color: #845f3f;
+            color: #fff;
+            opacity: 0.5;
+
         }
         
         .m_btn .mai:hover {
             background-color: #845f3f;
             color: #fff;
+            opacity: 0.5;
         }
         
         .m_btn .sc {

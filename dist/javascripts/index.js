@@ -24,7 +24,7 @@ next_ele.onclick = function () {
 
 prev_ele.onclick = function () {
   if (index === 0) {
-    index = 6;
+    index = 5;
     wrapper_ele.style.left = -6027 + "px";
   } else {
     index--;
@@ -116,30 +116,30 @@ function xaio_guo() {
 var wrapper_tow = document.querySelector(".wrapper_tow");
 var you_tow = document.querySelector(".you_tow");
 var zou_tow = document.querySelector(".zou_tow");
-var index_t = 0; //鼠标点击事件
+var tow = 0; //鼠标点击事件
 
 you_tow.onclick = function () {
-  if (index_t === 4) {
+  if (tow === 4) {
     return;
   } else {
-    index_t++;
+    tow++;
   }
 
   tow_m();
 };
 
 zou_tow.onclick = function () {
-  if (index_m === 0) {
+  if (tow === 0) {
     return;
   } else {
-    index_t--;
+    tow--;
   }
 
   tow_m();
 };
 
 function tow_m() {
-  move(wrapper_tow, "left", -index_t * 271);
+  move(wrapper_tow, "left", -tow * 271);
 } //第二个轮播结束
 //倒计时
 

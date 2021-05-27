@@ -36,7 +36,7 @@ $(function () {
 
   function render(list) {
     $(".lis_cont").html(list.map(function (item) {
-      return "<div class=\"lis_pro\">\n                   <div class=\"lis_img\">\n                    <img src=\"".concat(item.imges, "\" alt=\"\">\n                </div>\n                <p class=\"lis_info\">").concat(item.name, "</p>\n                <p class=\"lis_jia\">\n                    <span class=\"pro-unit\">\xA5</span>\n                    <span class=\"m-num\">").concat(item.price, "</span>\n                    <span class=\"pro-flag\">\u8D77</span>\n                    <span class=\"m-sale-tag\">\u7279\u4EF7</span>\n                </p>\n                </div> ");
+      return "<div class=\"lis_pro\">\n                     <a href=\"./s_details.html\" class=\"lis_img\" style=\"display: block;\">\n                        <img src=\"".concat(item.imges, "\" alt=\"\">\n                    </a>\n                <p class=\"lis_info\">").concat(item.name, "</p>\n                <p class=\"lis_jia\">\n                    <span class=\"pro-unit\">\xA5</span>\n                    <span class=\"m-num\">").concat(item.price, "</span>\n                    <span class=\"pro-flag\">\u8D77</span>\n                    <span class=\"m-sale-tag\">\u7279\u4EF7</span>\n                </p>\n                </div> ");
     }).join(""));
   }
 }); // 渲染結束

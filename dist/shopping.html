@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商品列表</title>
+    <title>购物车</title>
+    <script src="https://www.jq22.com/jquery/vue.min.js"></script>
+    <script src="https://s1.pstatp.com/cdn/expire-1-M/vue/2.2.2/vue.min.js"></script>
 </head>
 <body>
-    <!-- 头部 -->
-    <!-- 头部 -->
+     <!-- header开始 -->
+     <!-- 头部 -->
 <div class="nav_top_a">
 <div class="nav_top">
     <div class="nav_a w">
@@ -70,29 +72,58 @@
 <!-- 登录成功之后 -->
 <!-- logo导航部分结束 -->
 <!-- 头部结束 -->
-    <!-- 头部 -->
-    <!-- 身 -->
-    <div class="lis_cont">
-        <div class="lis_pro">
-            <a href="./s_details.html" class="lis_img" style="display: block;">
-                <img src="https://img.youpin.mi-img.com/shopmain/3d6939e06920bacbf3403616ad97e4fb.png@base@tag=imgScale&F=webp" alt="">
-            </a>
-            <p class="lis_info">赛睿Arctis寒冰系列游戏耳机RB...</p>
-            <p class="lis_jia">
-                <span class="pro-unit">¥</span>
-                <span class="m-num">799</span>
-                <span class="pro-flag">起</span>
-                <span class="m-sale-tag">特价</span>
-            </p>
-        </div>
-       
+     <!-- header结束 -->
+<div class="sh_cont">
+    <p class="sh_tit">
+        <span>首页&gt;</span>
+        <span>购物车</span>
+    </p>
+</div>
+<div id="app">
+    <table>
+        <tbody>
+            <div class="merch">
+                <div class="merch_a">
+                   <span class="merch_b"> <input type="checkbox"></span>
+                    <span class="merch_c">小米自营</span>
+                    <span class="merch_d"><i></i>已免运费</span>
+                </div>
+            </div>
+            <tr class="sh_one" v-for="(item,i) in searchFor" :key="i">
+
+                <td> 
+                    <span><input type="checkbox"></span>
+                </td>
+                <td>
+                    <p class="pic"><img :src="item.url" alt=""></p>
+                </td>
+                <td>
+                    <p class="good-name">{{item.name}}</p>
+
+                </td>
+                <td>
+                    <div class="price"><span>{{item.price | numFilter(1)}}</span></div>
+                </td>
+                <td>
+                    <div class="jia_ge">
+                        <button class="jian_m" @click="item.count-=1" :disabled="item.count==1">-</button>
+                        <span>{{item.count}}</span> 
+                        <button class="ja_m" @click="item.count+=1">+</button>
+                    </div>
+                </td>
+                
+                <td>
+                    <div class="jia">{{item.count*item.price | numFilter(2)}}</div>
+                </td>
+                <td><button id="del">删除</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="rig">
+        <div colspan="6" style="text-align: center;"><span>{{totalCount}}</span>件商品总计（不含运费）<span  style="color: red;">{{totalPrice | numFilter(2)}}</span></div>
     </div>
-    <div class="pagination"></div>
-
-
-    <!-- footer部分 -->
-
-    <div class="m_foot">
+</div>
+     <div class="m_foot">
     <div class="foot_cont w">
         <div class="foot_logo">
             <img src="https://www.xiaomiyoupin.com/static3/media/logo@2x.30cd8c00.png" alt="">
@@ -165,11 +196,13 @@
         </li>
     </ul>
 </div>
-    <!-- footer部分结束 -->
+     <!-- footer部分结束 -->
+     <!-- 主页样式 -->
+     <link rel="stylesheet" href="./css/shopping.css">
+<script src="./javascripts/shopping.js"></script>
 
-    
-    <!-- 首页样式 -->
-    <!-- jQuery封装 -->
+ <!-- 首页样式 -->
+     <!-- jQuery封装 -->
 <script src="./javascripts/jQuery.js"></script>
 <script src="./data/data.json"></script>
 <!-- 主页js -->
@@ -187,15 +220,5 @@
 <link rel="stylesheet" href="./css/public.css">
 <!-- 商品详情 -->
 <link rel="stylesheet" href="./css/s_details.css">
-<!-- 本页面样式 -->
-
-<!-- 分頁 -->
-<script src="./javascripts/jquery.pagination.js"></script>
-<!-- 頁面js -->
-<script src="./javascripts/list_details.js"></script>
-<!-- 商品列表样式 -->
-<link rel="stylesheet" href="./css/list_details.css">
-<!-- 公共样式 -->
-<link rel="stylesheet" href="./css/public.css">
 </body>
 </html>

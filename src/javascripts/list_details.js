@@ -39,9 +39,9 @@ $(function() {
         $(".lis_cont").html(
             list.map((item) => 
                   `<div class="lis_pro">
-                   <div class="lis_img">
-                    <img src="${item.imges}" alt="">
-                </div>
+                     <a href="./s_details.html" class="lis_img" style="display: block;">
+                        <img src="${item.imges}" alt="">
+                    </a>
                 <p class="lis_info">${item.name}</p>
                 <p class="lis_jia">
                     <span class="pro-unit">¥</span>

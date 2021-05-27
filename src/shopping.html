@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <script src="https://www.jq22.com/jquery/vue.min.js"></script>
+    <script src="https://s1.pstatp.com/cdn/expire-1-M/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+     <!-- header开始 -->
+     @@include("./components/header.html")
+     <!-- header结束 -->
+<div class="sh_cont">
+    <p class="sh_tit">
+        <span>首页&gt;</span>
+        <span>购物车</span>
+    </p>
+</div>
+<div id="app">
+    <table>
+        <tbody>
+            <div class="merch">
+                <div class="merch_a">
+                   <span class="merch_b"> <input type="checkbox"></span>
+                    <span class="merch_c">小米自营</span>
+                    <span class="merch_d"><i></i>已免运费</span>
+                </div>
+            </div>
+            <tr class="sh_one" v-for="(item,i) in searchFor" :key="i">
+
+                <td> 
+                    <span><input type="checkbox"></span>
+                </td>
+                <td>
+                    <p class="pic"><img :src="item.url" alt=""></p>
+                </td>
+                <td>
+                    <p class="good-name">{{item.name}}</p>
+
+                </td>
+                <td>
+                    <div class="price"><span>{{item.price | numFilter(1)}}</span></div>
+                </td>
+                <td>
+                    <div class="jia_ge">
+                        <button class="jian_m" @click="item.count-=1" :disabled="item.count==1">-</button>
+                        <span>{{item.count}}</span> 
+                        <button class="ja_m" @click="item.count+=1">+</button>
+                    </div>
+                </td>
+                
+                <td>
+                    <div class="jia">{{item.count*item.price | numFilter(2)}}</div>
+                </td>
+                <td><button id="del">删除</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="rig">
+        <div colspan="6" style="text-align: center;"><span>{{totalCount}}</span>件商品总计（不含运费）<span  style="color: red;">{{totalPrice | numFilter(2)}}</span></div>
+    </div>
+</div>
+     @@include("./components/footer.html")
+     <!-- footer部分结束 -->
+     <!-- 主页样式 -->
+     @@include("./components/link_shopping.html")
+
+ <!-- 首页样式 -->
+     @@include("./components/link.html")
+</body>
+</html>

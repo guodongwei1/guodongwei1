@@ -1,0 +1,123 @@
+// // 内容
+
+.sh_cont{
+    width: 1080px;
+    margin: 0 auto;
+    margin-top: 20px;
+    .sh_tit{
+        font-size: 14px;
+    }
+}
+#app{
+    width: 1080px;
+    margin: 0 auto;
+    
+}
+.merch{
+    margin-top: 70px;
+    width: 1080px;
+    .merch_d{
+        float: right;
+    }
+}
+.cart_itms{
+    width: 1080px;
+    height: 145px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top:10px ;
+    display: flex;
+    margin-top: 60px;
+        }
+    .cart_itms .span{
+        width: 40px;
+        box-sizing: border-box;
+        padding-top:50px ;
+        padding-left: 10px;
+    }
+    .cart_itms>span .pic{
+        width: 120px;
+        height: 120px;
+    }
+    .pic>img{
+        width: 120px;
+        height: 120px;
+     }
+    
+    .good-name{
+        width: 330px;
+        height: 142px;
+        box-sizing: border-box;
+        padding-top:50px ;
+        padding-left: 10px;
+    }
+    .price{
+        width: 190px;
+        height: 142px;
+        box-sizing: border-box;
+        padding-top:50px ;
+        padding-left: 10px;
+    }
+    .num_red{
+        width:134px;
+        height: 130px;
+        box-sizing: border-box;
+        padding-top:50px ;
+        }
+        .num_red .num_m{
+            width: 134px;
+            height: 32px;
+            display: flex;
+            }
+            .num_red .num_m>p{
+                width: 32px;
+                height: 32px;
+                border: 1px solid #999;
+                line-height: 30px;
+                text-align: center;
+                font-size: 24px;
+            }
+            .txt{
+                color: #333;
+                font-size: 14px;
+            }
+    
+    .jia{
+        width: 150px;
+        height: 130px;
+        box-sizing: border-box;
+        padding-top:50px ;
+        padding-left: 70px;
+        margin-left: 40px;
+        }
+    
+    .sh_one{
+        width: 1080px;
+        height: 176px;
+    }
+    .jia_ge{
+        border: 1px solid #999;
+    }
+    .jian_m{
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        background-color: rgb(240, 238, 238);
+        border: none;
+    }
+    .ja_m{
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+        border: none;
+    }
+    #del{
+        width: 40px;
+        font-size: 14px;
+        border: none;
+        background-color: #fff;
+        box-sizing: border-box;
+        margin-left: 20px;
+        font-size: 18px;
+        cursor:pointer;
+    }
