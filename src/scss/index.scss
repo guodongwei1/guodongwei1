@@ -83,6 +83,111 @@ w {
     background-color: rgb(124, 34, 34);
     color: #fff;
 }
+.m_login_cg{
+    display:none;
+    width: 120px;
+    height: 48px;
+    background-color: pink;
+    position: absolute;
+    line-height: 48px;
+    top: 0;
+    left: 866px;
+}
+.login{
+    display: flex;
+}
+.login>img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.login .name{
+    
+    font-size: 14px;
+    color: #fff;
+    line-height: 42px;
+}
+.login>p{
+    line-height: 42px;
+    color:#ddd;
+}
+.yin{
+    display:block;
+}
+// <!-- 头部导航结束 -->
+//     <!-- logo导航部分 -->
+.m_header_a{
+    height: 71px;
+    background-color: #fff;
+
+}
+.m_header {
+    width: 1080px;
+    display: flex;
+    justify-content: space-between;
+    height: 71px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    margin: 0 auto;
+}
+
+.m_header .m_logo {
+    width: 123px;
+    height: 51px;
+}
+
+.m_header .m_list {
+    display: flex;
+    align-items: center;
+    width: 420px;
+    height: 51px;
+    margin-left: 60px;
+}
+
+.m_header .m_list>a {
+    margin-right: 30px;
+    font-size: 18px;
+}
+
+.m_header .m_list>a:hover {
+    color: #9f8052;
+}
+
+.m_header .m_form {
+    width: 280px;
+    height: 42px;
+    border-bottom: 1px solid #333;
+}
+
+.m_header .m_form .fdj {
+    font-size: 20px;
+    color: #000;
+    font-weight: 700;
+    line-height: 42px;
+}
+
+.m_header .m_form .fdj:hover {
+    color: #9f8052;
+}
+
+.m_header .m_form .sou {
+    width: 247px;
+    height: 25px;
+    border: none;
+    color: #ccc;
+}
+
+.m_header .cai>a {
+    display: block;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-right: 20px;
+}
 
 //  <!-- logo导航部分结束 -->
 // <!-- 横幅导航部分 -->
